@@ -6,6 +6,7 @@ def est_palindrome(mot):
         if mot[i] != mot[-i-1]:
             return False
         return True
+        
 
 
 # récursif
