@@ -6,12 +6,11 @@ def est_palindrome(mot):
         if mot[i] != mot[-i-1]:
             return False
         return True
-        
-
 
 # récursif
 
 def est_palindromer(mot):
+    mot = mot.replace("","")
     if len(mot) < 2 :
         return True
     if mot[0] != mot[len(mot)-1]:
