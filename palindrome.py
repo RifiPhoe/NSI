@@ -8,7 +8,7 @@ def est_palindrome(mot):
         return True
 
 
-
+# récursif
 
 def est_palindromer(mot):
     if len(mot) < 2 :
