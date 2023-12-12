@@ -1,5 +1,10 @@
 ﻿# exo 3
 
+def minimum(nombre, autre):
+    if autre < nombre:
+        return autre
+    return nombre
+
 def miniLt(L):
     mini = L[0]
     for i in range (1, len(L)):
