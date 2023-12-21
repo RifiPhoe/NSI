@@ -35,6 +35,9 @@ class ArbreBinaire:
             return True
         else:
             return False
+    
+    def hauteur(self,noeud):
+        pass
 
 
 
