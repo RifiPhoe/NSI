@@ -37,7 +37,11 @@ class ArbreBinaire:
             return False
     
     def hauteur(self,noeud):
-        pass
+        if self.est_feuille == True:
+            return -1
+        else:
+            
+
 
 
 
