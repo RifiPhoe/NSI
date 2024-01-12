@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# correction arbres : https://www.yworks.com/yed-live/
 """
 Created on Sun Nov 21 15:41:18 2021
 
@@ -118,6 +118,37 @@ class ArbreBinaire:
                 return self.droit.nb_feuille()
             else:
                 return self.gauche.nb_feuille()
+    
+    def parcours_prefixe(self):
+        if self!=None:
+            print(self.data,end='')
+            if self.gauche!=None:
+                self.gauche.parcours_prefixe()
+            if self.droit!=None:
+                self.droit.parcours_prefixe()
+
+    def parcours_infixe(self):
+        pass
+
+
+def parcours_largeur(arbre):
+    f=File()
+    f.enfiler(arbre)
+    parcoursLargeur=[]
+    while f.vide()!=True:
+        n=f.defiler()
+        parcoursLargeur.append(n.data)
+        if n.gauche != None:
+            f.enfiler(n.gauche)
+        if n.droit != None:
+            f.enfiler(n.droit)
+    return parcoursLargeur
+
+def parcours_suffixe(arbre):
+    if arbre!=None:
+        parcours_suffixe(arbre.gauche)
+        parcours_suffixe(arbre.droit)
+        print(arbre,end='')
 
 
 
