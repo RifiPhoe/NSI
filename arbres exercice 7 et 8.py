@@ -128,7 +128,12 @@ class ArbreBinaire:
                 self.droit.parcours_prefixe()
 
     def parcours_infixe(self):
-        pass
+          if self!=None:
+            if self.gauche!=None:
+                self.gauche.parcours_infixe()
+            print(self.data,end='')_è
+            if self.droit!=None:
+                self.droit.parcours_infixe()
 
 
 def parcours_largeur(arbre):
@@ -149,6 +154,12 @@ def parcours_suffixe(arbre):
         parcours_suffixe(arbre.gauche)
         parcours_suffixe(arbre.droit)
         print(arbre,end='')
+
+def parcours_prefixe(arbre):
+    if arbre!=None:
+        print(arbre,end='')
+        parcours_prefixe(arbre.gauche)
+        parcours_prefixe(arbre.droit)
 
 
 
