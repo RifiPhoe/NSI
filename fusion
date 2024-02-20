@@ -1,0 +1,35 @@
+def fusion(T1,T2):
+    # initialisation des indices a 0 et d'un tableau vide
+    i = 0
+    j = 0
+    T = []
+    #Tant que l'on n'a pas atteint la fin des tableaux:
+    # Tant que les indices i et j sont inferieurs a la longueur de T1 et T2,
+    # Si l'indice i de T1 est inferieur ou egal a l'indice j de T2
+    # Ajouter a T l'indice i de T1
+    # L'indice i = i+1 (permet de passer a l'element suivant)
+    # Autrement, ajouter a T l'indice j de T2, et j devient j+1
+
+    while i<len(T1) and j<len(T2):
+        if T1[i] <= T2[j]:
+            T.append(T1[i])
+            i = i+1
+        else:
+            T.append(T2[j])
+            j = j+1
+# Inserer les elements restants si tableaux non vide a la fin de T :
+# Tant que l'indice i est inferieur a la longueur de T1
+# Ajouter a T l'indice i de T1, et i = i+1
+# Idem j
+# Renvoyer T
+    while i<len(T1):
+        T.append(T1[i])
+        i =i+1
+    while j<len(T2):
+        T.append(T2[j])
+        j = j+1
+
+    return T
+
+
+print(fusion([3,6,8],[2,5,7,12]))
